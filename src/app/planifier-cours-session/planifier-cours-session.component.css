@@ -1,0 +1,112 @@
+.right{
+  background-color: var(--blacklight);
+  width: 74%;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  color : var(--white)
+}
+.rightheader{
+  padding: 1.5em 0.5em 1em ;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.rightheader > div:nth-child(1){
+  width : auto;
+  display: flex;
+  /* border: 1px solid white; */
+  padding: .3em;
+}
+#btoggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width : 2.1em;
+  height : 1.2em;
+  border-radius: 2em;
+  background-color: var(--white);
+  margin-right: 1em;
+}
+#btoggle .slider{
+  position : absolute;
+  top: .1em;
+  left: .1em;
+  width : 1em;
+  height : 1em;
+  border-radius: 50%;
+  background-color: var(--blacklight);
+  transition : 0.5s
+}
+.chocher{
+  background-color: pink;
+
+}
+.sliderr{
+
+  transform: translateX(30px);
+}
+.postheader1{
+  width : 4em;
+  margin: 1em;
+}
+.postheader2{
+  width : 100%;
+  /* padding : .1em 0 .1em 1em; */
+  background-color: var(--heavygrey);
+  border-radius: 2em;
+  margin-bottom: 0.1em;
+  display: flex;
+}
+.space{
+  width : 15%;
+}
+.heure{
+  width : 100%;
+  display: flex;
+}
+.heure span{
+  flex :1;
+}
+.day-content {
+  position : relative;
+  display: flex;
+  width : 100%;
+}
+.postheader3{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.postheader3 > div{
+  width : auto;
+  height: 6em;
+  border-radius: 1em;
+  display: flex;
+  padding : 0.1em;
+}
+.postheader3 > div > div{
+  height :auto;
+}
+.postheader3 > div > div:nth-child(1){
+  width: 14%;
+  border: 1px solid var(--grey);
+  margin-right : 0.1em;
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+  font-size: 1.2rem;
+}
+
+.iconeday{
+  color: var(--green);
+}
+.postheader3 > div > div:nth-child(2){
+  width: 86%;
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
+  background-color: var(--azure);
+}

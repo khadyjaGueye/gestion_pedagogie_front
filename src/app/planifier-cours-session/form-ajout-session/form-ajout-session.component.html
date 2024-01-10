@@ -1,0 +1,120 @@
+<main class="bg-white-500 flex-1 p-3 overflow-hidden">
+  <form class="w-full" [formGroup]="formSession">
+    <div class="flex flex-col ml-64 mt-20">
+      <!-- Card Sextion Starts Here -->
+      <div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
+        <!--Horizontal form-->
+        <div class="mb-2 border-solid border-grey-light rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
+          <div class="bg-[#2596be] px-2 py-3 border-solid border-gray-400 border-b">
+            Semestre
+          </div>
+          <div class="p-3">
+
+            <div class="md:flex md:items-center mb-6">
+              <div class="md:w-1/4">
+                <label class="block text-gray-500 font-regular md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Semestre
+                </label>
+              </div>
+              <div class="md:w-3/4">
+                <select formControlName="salle_id"
+                  class="block appearance-none w-full bg-grey-200 border border-grey-200 text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                  id="grid-state">
+                  <option *ngFor="let salle of salles" [value]="salle.id">{{salle.nom}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+              <div class="md:w-1/4">
+                <label class="block text-grey font-regular md:text-right mb-1 md:mb-0 pr-4" for="inline-username">
+                  Module
+                </label>
+              </div>
+              <div class="md:w-3/4">
+                <select formControlName="module_id"
+                  class="block appearance-none w-full bg-grey-200 border border-grey-200 text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                  id="grid-state">
+                  <option></option>
+                </select>
+              </div>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+              <div class="md:w-1/4">
+                <label class="block text-grey font-regular md:text-right mb-1 md:mb-0 pr-4" for="inline-username">
+                  Prof
+                </label>
+              </div>
+              <div class="md:w-3/4">
+                <select formControlName="prof_id"
+                  class="block appearance-none w-full bg-grey-200 border border-grey-200 text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                  id="grid-state">
+                  <option>New Mexico</option>
+                  <option>Missouri</option>
+                  <option>Texas</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--/Horizontal form-->
+
+        <!--Underline form-->
+        <div
+          class="mb-2 md:mx-2 lg:mx-2 border-solid border-gray-200 rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
+          <div class="bg-[#2596be] px-2 py-3 border-solid border-gray-400 border-b">
+            Classes
+          </div>
+          <div class="p-3">
+            <div class="flex gap-4  items-center border-b border-b-1 border-teal-500 py-2">
+              <label for="">Classe</label>
+              <input type="checkbox" formControlName="classe_id">
+            </div>
+          </div>
+        </div>
+        <!--/Underline form-->
+      </div>
+      <!-- /Cards Section Ends Here -->
+      <!--Grid Form-->
+      <div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
+        <div class="mb-2 border-solid border-gray-300 rounded border shadow-sm w-full">
+          <div class="bg-[#2596be] px-2 py-3 border-solid border-gray-400 border-b">
+            Heure
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-2 ml-3 mt-6 mr-3">
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-grey-darker text-xl font-light mb-1" for="grid-city">
+                Date
+              </label>
+              <input  formControlName="dateCours"
+                class="appearance-none block w-full bg-grey-200 text-grey-darker border border-grey-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                id="grid-city" type="date" placeholder="Albuquerque">
+            </div>
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-grey-darker text-xl font-light mb-1" for="grid-zip">
+                HeureDebut
+              </label>
+              <input formControlName="hDedut"
+                class="appearance-none block w-full bg-grey-200 text-grey-darker border border-grey-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                id="grid-zip" type="text" placeholder="HeureDebut">
+            </div>
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-grey-darker text-xl font-light mb-1" for="grid-zip">
+                HeureFin
+              </label>
+              <input formControlName="hFin"
+                class="appearance-none block w-full bg-grey-200 text-grey-darker border border-grey-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                id="grid-zip" type="text" placeholder="HeureFin">
+            </div>
+          </div>
+          <div class="flex justify-center mt-5">
+            <button type="button" class="text-white bg-[#2596be] hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+      <!--/Grid Form-->
+    </div>
+  </form>
+</main>
+<!--/Main-->
+

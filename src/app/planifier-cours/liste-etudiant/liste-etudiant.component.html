@@ -1,0 +1,130 @@
+<div>
+  <main class="bg-white-300 ml-60 mt-24 flex-1 p-3 overflow-hidden">
+    <div class="flex flex-col">
+      <!-- Stats Row Starts Here -->
+      <div class="flex flex-1 justify-between flex-col md:flex-row lg:flex-row mx-2">
+        <div
+          class="shadow-lg bg-[#2596be] border-l-8 hover:bg-red-vibrant-dark border-red-vibrant-dark mb-2 p-2 md:w-1/4 mx-2">
+          <div class="p-4 flex flex-col">
+            <form>
+              <div class="flex">
+                <label for=""
+                  class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">Classe</label>
+                <div class="relative w-full">
+                  <select (change)="inputClasse($event)" id="dropdown-button-2" data-dropdown-toggle="dropdown-search-city"
+                    class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                    type="button">
+                    <option value="" *ngFor="let classe of classes" [value]="classe.id">{{classe.nom}}</option>
+                  </select>
+                  <button type="submit"
+                    class="absolute top-0 right-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="shadow bg-[#2596be] border-l-8 hover:bg-info-dark border-info-dark mb-2 p-2 md:w-1/4 mx-2">
+          <div class="p-4 flex flex-col">
+            <div class="flex">
+              <label for=""
+                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">Prof</label>
+              <div class="relative w-full">
+                <select  id="dropdown-button-2" data-dropdown-toggle="dropdown-search-city"
+                  class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                  type="button">
+                  <option value="" ></option>
+                </select>
+                <button type="submit"
+                  class="absolute top-0 right-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                  </svg>
+                  <span class="sr-only">Search</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shadow bg-[#2596be] border-l-8 hover:bg-success-dark border-success-dark mb-2 p-2 md:w-1/4 mx-2">
+          <div class="p-4 flex flex-col">
+            <div class="flex">
+              <label for=""
+                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">Module</label>
+
+              <div class="relative w-full">
+                <select  id="dropdown-button-2" data-dropdown-toggle="dropdown-search-city"
+                  class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                  type="button">
+                  <option></option>
+                </select>
+                <button type="submit"
+                  class="absolute top-0 right-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                  </svg>
+                  <span class="sr-only">Search</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Stats Row Ends Here -->
+
+      <!-- Card Sextion Starts Here -->
+      <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2">
+        <!-- card -->
+        <div class="rounded overflow-hidden shadow bg-white mx-2 w-full mt-6">
+          <div class="px-6 py-2 border-b  border-light-grey">
+            <div class="font-bold text-xl text-center ">Liste des cours</div>
+          </div>
+          <div class="table-responsive ">
+            <table class="table text-grey-darkest w-full">
+              <thead class="text-white bg-[#2596be] text-normal h-12">
+                <tr>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Prenom</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Classe</th>
+                  <!-- <th scope="col">Action</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let etu of showToEtudiant" class=" border-b border-blue-400">
+                  <td class="px-6 py-4">{{etu.etudiant.nom}}</td>
+                  <td class="px-6 py-4">{{etu.etudiant.prenom}}</td>
+                  <td class="px-6 py-4">{{etu.etudiant.email}}</td>
+                  <td class="px-6 py-4">{{etu.classe.nom}}</td>
+                  <!-- <td class="px-6 py-4">
+                    <button  data-modal-target="authentication-modal"
+                      data-modal-toggle="authentication-modal"
+                      class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      type="button">
+                      AjouterSession
+                    </button>
+                  </td> -->
+                </tr>
+              </tbody>
+            </table>
+            <!-- Main modal -->
+
+          </div>
+        </div>
+        <!-- /card -->
+      </div>
+    </div>
+  </main>
+
